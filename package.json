@@ -1,6 +1,6 @@
 {
   "name": "@lindystack/json-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "author": "Andrew Brown",
@@ -20,8 +20,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "vitest",
-    "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast -- --dts-resolve"
+    "build": "tsup src/index.ts --format cjs,esm --dts-resolve --sourcemap --clean"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
