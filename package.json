@@ -1,0 +1,35 @@
+{
+  "name": "@lindystack/json-schema",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Andrew Brown",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "vitest",
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2"
+  },
+  "dependencies": {
+    "@effect/schema": "^0.33.1"
+  }
+}
