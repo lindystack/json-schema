@@ -1,6 +1,7 @@
 import * as S from "@effect/schema/Schema";
 
 import {
+  ArrayRefSchema,
   ArraySchema,
   JsonSchema,
   NumberSchema,
@@ -21,6 +22,10 @@ export const isStringSchema = (schema: JsonSchema): schema is StringSchema =>
 
 export const isArraySchema = (schema: JsonSchema): schema is ArraySchema =>
   S.is(ArraySchema)(schema);
+
+export const isArrayRefSchema = (
+  schema: JsonSchema,
+): schema is ArrayRefSchema => S.is(ArraySchema)(schema);
 
 export const isObjectSchema = (schema: JsonSchema): schema is ObjectSchema =>
   S.is(ObjectSchema)(schema);

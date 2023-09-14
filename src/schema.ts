@@ -83,6 +83,22 @@ export const ArraySchema: S.Schema<ArraySchema> = S.lazy(() =>
 );
 
 /* -------------------------------------------------------------------------------------------------
+ * ArrayRef
+ * -----------------------------------------------------------------------------------------------*/
+
+export interface ArrayRefSchema extends Common {
+  type: "array";
+  items: RefSchema;
+}
+
+export const ArrayRefSchema: S.Schema<ArrayRefSchema> = S.lazy(() =>
+  Common.pipe(S.extend(S.struct({
+    type: S.literal("array"),
+    items: RefSchema,
+  })))
+);
+
+/* -------------------------------------------------------------------------------------------------
  * Json
  * -----------------------------------------------------------------------------------------------*/
 
