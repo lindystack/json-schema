@@ -20,7 +20,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "vitest",
-    "build": "tsup src/index.ts --format cjs,esm --dts-resolve --sourcemap --clean"
+    "build": "tsup src/index.ts --format cjs,esm --dts-resolve --sourcemap --clean",
+    "publish": "pnpm test && pnpm build && changesets version && changesets publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
