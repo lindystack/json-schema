@@ -1,5 +1,11 @@
 # @lindystack/json-schema
 
+## 0.1.0
+
+### Minor Changes
+
+- Added ArrayRef schema
+
 ## 0.0.2
 
 ### Patch Changes
